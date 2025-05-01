@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Tsegaye Tadele", url: "https://portfolio-two-kappa-98.vercel.app/" }],
   creator: "Tsegaye Tadele",
   openGraph: {
-    title: "Tsegaye Tadele | Full Stack Developer & AI Specialist",
+    title: "Tsegaye Tadele portfolio",
     description: "Portfolio of Tsegaye Tadele, Full Stack Developer & AI Integration Specialist. See my work, skills, and contact info.",
     url: "https://portfolio-two-kappa-98.vercel.app/",
     siteName: "Tsegaye Tadele Portfolio",
