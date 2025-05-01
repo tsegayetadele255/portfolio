@@ -179,11 +179,7 @@ export default function DraggableChatbot() {
           <div
             className="flex items-center gap-2 cursor-move bg-[#18181b] rounded-t-3xl px-4 py-2 select-none touch-action-none"
             onMouseDown={startDrag}
-            onMouseUp={stopDrag}
-            onMouseMove={onDrag}
             onTouchStart={startDrag}
-            onTouchEnd={stopDrag}
-            onTouchMove={onDrag}
           >
             <Image src="/me.jpg" alt="Tsegaye&apos;s avatar" width={28} height={28} className="rounded-full border border-gray-300 object-cover" />
             <span className="font-bold text-white">Tsegaye&apos;s AI Assistant</span>
