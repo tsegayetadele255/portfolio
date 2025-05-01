@@ -4,12 +4,7 @@ import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
 import { notFound } from 'next/navigation';
 
-type PageProps = {
-  params: { slug: string };
-  searchParams?: { [key: string]: string | string[] };
-};
-
-export default function BlogPostPage({ params }: PageProps) {
+export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const blogDir = path.join(process.cwd(), 'content', 'blog');
   const filePath = path.join(blogDir, params.slug + '.md');
   if (!fs.existsSync(filePath)) return notFound();
