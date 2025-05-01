@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function ChatbotPage() {
   const [messages, setMessages] = useState([
-    { role: "system", content: "Hi! I am Tsegaye's AI assistant. Ask me anything about Tsegaye or his work!" },
+    { role: "system", content: "Hi! I am Tsegaye&apos;s AI assistant. Ask me anything about Tsegaye or his work!" },
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -47,12 +47,12 @@ export default function ChatbotPage() {
       <div className="flex items-center gap-3 mb-2">
         <Image
           src="/me.jpg"
-          alt="Tsegaye's avatar"
+          alt="Tsegaye&apos;s avatar"
           width={40}
           height={40}
           className="rounded-full border border-gray-300 dark:border-gray-600 object-cover"
         />
-        <h1 className="text-3xl font-bold text-white">Tsegaye's AI Assistant Chatbot</h1>
+        <h1 className="text-3xl font-bold text-white">Tsegaye&apos;s AI Assistant Chatbot</h1>
       </div>
       <div className="border border-gray-800 rounded-3xl p-4 h-96 overflow-y-auto bg-[#18181b] mb-4">
       <div className="mb-4 text-gray-200 text-lg">Welcome! I’m Tsegaye’s AI assistant. Ask me anything about Tsegaye, his skills, experience, or projects and etc!</div>
@@ -61,7 +61,7 @@ export default function ChatbotPage() {
             <div key={idx} className="flex justify-end items-start gap-2 my-2">
               <Image
                 src="/me.jpg"
-                alt="Tsegaye's avatar"
+                alt="Tsegaye&apos;s avatar"
                 width={30}
                 height={30}
                 className="rounded-full border border-gray-300 dark:border-gray-600 object-cover"

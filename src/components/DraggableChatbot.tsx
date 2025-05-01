@@ -13,7 +13,7 @@ export default function DraggableChatbot() {
 
   // Chatbot state
   const [messages, setMessages] = useState([
-    { role: "assistant", content: "Welcome! I’m Tsegaye’s AI assistant. Ask me anything about Tsegaye, his skills, experience, or projects!" },
+    { role: "assistant", content: "Welcome! I’m Tsegaye’s AI assistant. Ask me about Tsegaye, his skills, experience, or projects!" },
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -150,7 +150,7 @@ export default function DraggableChatbot() {
           className="fixed bottom-8 right-8 z-50 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg p-4 flex items-center gap-2"
           style={{ boxShadow: "0 2px 16px rgba(0,0,0,0.16)" }}
         >
-          <Image src="/me.jpg" alt="Tsegaye's avatar" width={32} height={32} className="rounded-full" />
+          <Image src="/me.jpg" alt="Tsegaye&apos;s avatar" width={32} height={32} className="rounded-full" />
           <span className="font-semibold hidden sm:inline">Chat with AI</span>
         </button>
       )}
@@ -189,8 +189,8 @@ export default function DraggableChatbot() {
             onTouchEnd={stopDrag}
             onTouchMove={onDrag}
           >
-            <Image src="/me.jpg" alt="Tsegaye's avatar" width={28} height={28} className="rounded-full border border-gray-300 object-cover" />
-            <span className="font-bold text-white">Tsegaye's AI Assistant</span>
+            <Image src="/me.jpg" alt="Tsegaye&apos;s avatar" width={28} height={28} className="rounded-full border border-gray-300 object-cover" />
+            <span className="font-bold text-white">Tsegaye&apos;s AI Assistant</span>
             <button className="ml-auto text-gray-400 hover:text-red-400" title="Close" onClick={() => setOpen(false)}>
               ×
             </button>
@@ -200,7 +200,7 @@ export default function DraggableChatbot() {
             {messages.filter(msg => msg.role !== "system").map((msg, idx) => (
               msg.role === "assistant" ? (
                 <div key={idx} className="flex flex-row items-start gap-2 my-2">
-                  <Image src="/me.jpg" alt="Tsegaye's avatar" width={22} height={22} className="rounded-full border border-gray-300 object-cover flex-shrink-0" />
+                  <Image src="/me.jpg" alt="Tsegaye&apos;s avatar" width={22} height={22} className="rounded-full border border-gray-300 object-cover flex-shrink-0" />
                   <span className="inline-block bg-[#232326]/40 backdrop-blur-sm text-white italic px-3 py-2 rounded-2xl shadow max-w-xs text-left break-words">{msg.content}</span>
                 </div>
               ) : (

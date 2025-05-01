@@ -195,7 +195,7 @@ export default function SkillsSection() {
             <div className="mb-4">
               <svg className="w-10 h-10 text-blue-400" fill="currentColor" viewBox="0 0 24 24"><path d="M7.17 6.17A7 7 0 0 0 3 13v2a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2v-2a7 7 0 0 0-2.83-6.83zM5 13a5 5 0 0 1 5-5 5 5 0 0 1 5 5v2a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2v-2z"/></svg>
             </div>
-            <p className="text-lg italic mb-4">"Tsegaye is a highly skilled developer who delivered our project on time and exceeded expectations. Communication was excellent throughout!"</p>
+            <p className="text-lg italic mb-4">&quot;Tsegaye is a highly skilled developer who delivered our project on time and exceeded expectations. Communication was excellent throughout!&quot;</p>
             <div className="font-semibold text-[#38bdf8]">Adane Bulo</div>
             <div className="text-sm text-[#c0bba3]">General Manager, I4s PLC</div>
           </div>
@@ -204,7 +204,7 @@ export default function SkillsSection() {
             <div className="mb-4">
               <svg className="w-10 h-10 text-green-400" fill="currentColor" viewBox="0 0 24 24"><path d="M7.17 6.17A7 7 0 0 0 3 13v2a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2v-2a7 7 0 0 0-2.83-6.83zM5 13a5 5 0 0 1 5-5 5 5 0 0 1 5 5v2a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2v-2z"/></svg>
             </div>
-            <p className="text-lg italic mb-4">"Professional, creative, and detail-oriented. The website looks amazing and works flawlessly on all devices."</p>
+            <p className="text-lg italic mb-4">&quot;Professional, creative, and detail-oriented. The website looks amazing and works flawlessly on all devices.&quot;</p>
             <div className="font-semibold text-[#38bdf8]">Michael Lee</div>
             <div className="text-sm text-[#c0bba3]">Founder, LeeTech Solutions</div>
           </div>

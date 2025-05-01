@@ -13,10 +13,10 @@ export default function Contact() {
     setCardVisible(true);
     // Staggered field entrance
     const timeouts = [
-      setTimeout(() => setFieldVisible([true, fieldVisible[1], fieldVisible[2], fieldVisible[3]]), 200),
-      setTimeout(() => setFieldVisible([true, true, fieldVisible[2], fieldVisible[3]]), 400),
-      setTimeout(() => setFieldVisible([true, true, true, fieldVisible[3]]), 600),
-      setTimeout(() => setFieldVisible([true, true, true, true]), 800),
+      setTimeout(f => setFieldVisible(prevState => [true, prevState[1], prevState[2], prevState[3]]), 200),
+      setTimeout(f => setFieldVisible(prevState => [true, true, prevState[2], prevState[3]]), 400),
+      setTimeout(f => setFieldVisible(prevState => [true, true, true, prevState[3]]), 600),
+      setTimeout(f => setFieldVisible([true, true, true, true]), 800),
     ];
     return () => timeouts.forEach(clearTimeout);
   }, []);
@@ -104,7 +104,7 @@ export default function Contact() {
       </svg>
       <div className={`bg-[#18181b] rounded-2xl shadow-2xl max-w-xl w-full p-8 flex flex-col gap-8 items-center relative z-10 border border-zinc-800 transition-all duration-700 ease-out transform
         ${cardVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'}`}>
-        <h1 className="text-4xl font-bold text-white text-center mb-6">Let's Get in Touch!</h1>
+        <h1 className="text-4xl font-bold text-white text-center mb-6">Let&apos;s Get in Touch!</h1>
         <form ref={formRef} onSubmit={sendEmail} className="w-full flex flex-col gap-4">
           <label htmlFor="user_name" className={`font-semibold text-gray-200 transition-all duration-700 ${fieldVisible[0] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>Name</label>
           <input name="user_name" id="user_name" type="text" placeholder="Full Name" className={`px-4 py-3 rounded-lg border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-purple-400 text-white bg-[#232326] placeholder-gray-400 transition-all duration-700 focus:shadow-lg focus:scale-[1.03] ${fieldVisible[0] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`} required />
