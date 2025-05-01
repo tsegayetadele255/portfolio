@@ -1,14 +1,11 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
-  const [mounted, setMounted] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
-
-  useEffect(() => setMounted(true), []);
 
   return (
     <nav className="fixed top-0 left-0 right-0 flex items-center justify-between py-4 px-6 bg-gradient-to-r from-black via-zinc-900 to-neutral-800/90 backdrop-blur-md shadow-lg shadow-black/20 border-b border-zinc-800 z-50">

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import styles from "./AnimatedBrightBorder.module.css";
-import Link from "next/link";
 import AnimatedFlag from "../components/AnimatedFlag";
 import SkillsSection from "./SkillsSection";
 

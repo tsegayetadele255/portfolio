@@ -61,7 +61,7 @@ export default function About() {
   <div className="flex-1 flex flex-col gap-10 items-start w-full justify-between">
     <h2 className="text-2xl md:text-3xl font-serif text-white mb-4 mt-4">I Can Help You With...</h2>
     <div className="flex flex-col gap-8 w-full">
-      {services.map((service, idx) => (
+      {services.map((service) => (
         <AboutServiceCard
           key={service.title}
           icon={service.icon}

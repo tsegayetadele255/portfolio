@@ -13,10 +13,10 @@ export default function Contact() {
     setCardVisible(true);
     // Staggered field entrance
     const timeouts = [
-      setTimeout(() => setFieldVisible(f => [true, f[1], f[2], f[3]]), 200),
-      setTimeout(() => setFieldVisible(f => [true, true, f[2], f[3]]), 400),
-      setTimeout(() => setFieldVisible(f => [true, true, true, f[3]]), 600),
-      setTimeout(() => setFieldVisible(f => [true, true, true, true]), 800),
+      setTimeout(() => setFieldVisible([true, fieldVisible[1], fieldVisible[2], fieldVisible[3]]), 200),
+      setTimeout(() => setFieldVisible([true, true, fieldVisible[2], fieldVisible[3]]), 400),
+      setTimeout(() => setFieldVisible([true, true, true, fieldVisible[3]]), 600),
+      setTimeout(() => setFieldVisible([true, true, true, true]), 800),
     ];
     return () => timeouts.forEach(clearTimeout);
   }, []);
@@ -34,8 +34,8 @@ export default function Contact() {
       );
       setResult("Message sent successfully!");
       formRef.current?.reset();
-    } catch (err) {
-      setResult("Failed to send message. Please try again.");
+    } catch {
+      setResult("Sorry, something went wrong. Please try again later.");
     } finally {
       setLoading(false);
     }

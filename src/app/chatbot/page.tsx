@@ -33,7 +33,8 @@ export default function ChatbotPage() {
       });
       const data = await res.json();
       setMessages((msgs) => [...msgs, { role: "assistant", content: data.reply }]);
-    } catch (e) {
+    } catch (error) {
+      console.error("Error fetching response:", error);
       setMessages((msgs) => [...msgs, { role: "assistant", content: "Sorry, something went wrong." }]);
     } finally {
       setLoading(false);

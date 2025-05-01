@@ -4,9 +4,7 @@ import React from "react";
 import barArrowStyles from "./AnimatedBarArrow.module.css";
 
 export default function SkillsSection() {
-  const handleDownload = (): void => {
-    window.open('/certificates/web.pdf', '_blank');
-  };
+  
   return (
     <>
       {/* SEE MORE section */}
