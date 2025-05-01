@@ -1,0 +1,21 @@
+.bright-animated-border {
+  
+  border-image: linear-gradient(90deg, #fff 0%, #38bdf8 50%, #fff 100%) 1;
+  animation: border-glow 2s linear infinite;
+  border-radius: 25% 25% 75% 75%;
+}
+
+@keyframes border-glow {
+  0% {
+    box-shadow: 0 0 0px #38bdf8, 0 0 10px #fff, 0 0 20px #38bdf8;
+    border-image: linear-gradient(90deg, #fff 0%, #38bdf8 50%, #fff 100%) 1;
+  }
+  50% {
+    box-shadow: 0 0 20px #38bdf8, 0 0 40px #fff, 0 0 60px #38bdf8;
+    border-image: linear-gradient(270deg, #fff 0%, #38bdf8 50%, #fff 100%) 1;
+  }
+  100% {
+    box-shadow: 0 0 0px #38bdf8, 0 0 10px #fff, 0 0 20px #38bdf8;
+    border-image: linear-gradient(90deg, #fff 0%, #38bdf8 50%, #fff 100%) 1;
+  }
+}

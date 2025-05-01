@@ -1,0 +1,24 @@
+.animated-bar {
+  height: 72px; /* Increased bar length */
+  width: 4px;
+  background: linear-gradient(180deg, #fff 60%, #38bdf8 100%);
+  animation: barGlow 1.5s ease-in-out infinite alternate;
+  border-radius: 2px;
+}
+
+@keyframes barGlow {
+  0% { box-shadow: 0 0 0px #38bdf8; }
+  100% { box-shadow: 0 0 18px #38bdf8; }
+}
+
+.animated-arrow {
+  width: 48px;
+  height: 48px;
+  display: block;
+  animation: arrowBounce 1.2s infinite cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+@keyframes arrowBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(16px); }
+}

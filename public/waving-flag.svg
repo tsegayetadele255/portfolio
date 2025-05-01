@@ -1,0 +1,53 @@
+<svg viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="flagBg" x1="0" y1="0" x2="0" y2="1" gradientTransform="scale(400 240)" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="sky" cx="0.5" cy="0.1" r="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.2"/>
+    </radialGradient>
+  </defs>
+  <!-- Multi-crest wavy flag fabric with more waves -->
+  <path d="M0,60
+    C28,10 57,110 85,60
+    S113,10 142,60
+    S170,110 198,60
+    S227,10 255,60
+    S283,110 312,60
+    S340,10 368,60
+    S397,110 400,60
+    L400,240
+    C372,190 343,290 315,240
+    S287,190 258,240
+    S230,290 202,240
+    S173,190 145,240
+    S117,290 88,240
+    S60,190 32,240
+    S3,290 0,240
+    Z"
+    fill="url(#flagBg)" stroke="#334155" stroke-width="3"/>
+  
+  <!-- Shadows on flag -->
+  <path d="M90,120 C120,170 170,110 210,140 S320,180 370,140" fill="none" stroke="#0e223f" stroke-width="14" opacity="0.18"/>
+  <path d="M60,190 C110,210 190,170 270,210" fill="none" stroke="#000" stroke-width="14" opacity="0.11"/>
+
+  
+  <!-- Dummy code lines -->
+  <text x="70" y="110" font-family="monospace" font-size="18" fill="#38bdf8" filter="url(#glow)" font-weight="bold">const user = {'{'}</text>
+  <text x="90" y="130" font-family="monospace" font-size="16" fill="#0ea5e9" filter="url(#glow)">  name: "Tsegaye",</text>
+  <text x="90" y="146" font-family="monospace" font-size="16" fill="#0ea5e9" filter="url(#glow)">  skills: ["React", "Next.js", "AI"]</text>
+  <text x="70" y="162" font-family="monospace" font-size="18" fill="#38bdf8" filter="url(#glow)" font-weight="bold">{'}'};</text>
+  <text x="70" y="182" font-family="monospace" font-size="18" fill="#38bdf8" filter="url(#glow)" font-weight="bold">function greet() {'{'}</text>
+  <text x="90" y="198" font-family="monospace" font-size="16" fill="#0ea5e9" filter="url(#glow)">  console.log("Tsegaye's Portfolio");</text>
+  <text x="70" y="214" font-family="monospace" font-size="18" fill="#38bdf8" filter="url(#glow)" font-weight="bold">{'}'}</text>
+
+</svg>

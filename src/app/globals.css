@@ -1,9 +1,26 @@
 @import "tailwindcss";
+@layer base {
+  .font-dancing-script {
+    font-family: var(--font-dancing-script);
+  }
+}
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
+
+@keyframes flag-wave {
+  0%, 100% { transform: rotateZ(-7deg) skewY(-7deg) scaleY(1.07); }
+  20% { transform: rotateZ(9deg) skewY(9deg) scaleY(0.93); }
+  50% { transform: rotateZ(-7deg) skewY(-7deg) scaleY(1.07); }
+  70% { transform: rotateZ(9deg) skewY(9deg) scaleY(0.93); }
+}
+.flag-waving {
+  animation: flag-wave 1.2s infinite linear;
+  transform-origin: left center;
+}
+
 
 @theme inline {
   --color-background: var(--background);
@@ -12,15 +29,68 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@keyframes flag-wave {
+  0%, 100% { transform: rotateZ(-7deg) skewY(-7deg) scaleY(1.07); }
+  20% { transform: rotateZ(9deg) skewY(9deg) scaleY(0.93); }
+  50% { transform: rotateZ(-7deg) skewY(-7deg) scaleY(1.07); }
+  70% { transform: rotateZ(9deg) skewY(9deg) scaleY(0.93); }
+}
+.flag-waving {
+  animation: flag-wave 1.2s infinite linear;
+  transform-origin: left center;
+}
+
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+
+@keyframes flag-wave {
+  0%, 100% { transform: rotateZ(-7deg) skewY(-7deg) scaleY(1.07); }
+  20% { transform: rotateZ(9deg) skewY(9deg) scaleY(0.93); }
+  50% { transform: rotateZ(-7deg) skewY(-7deg) scaleY(1.07); }
+  70% { transform: rotateZ(9deg) skewY(9deg) scaleY(0.93); }
+}
+.flag-waving {
+  animation: flag-wave 1.2s infinite linear;
+  transform-origin: left center;
+}
+
+}
+
+@keyframes flag-wave {
+  0%, 100% { transform: rotateZ(-7deg) skewY(-7deg) scaleY(1.07); }
+  20% { transform: rotateZ(9deg) skewY(9deg) scaleY(0.93); }
+  50% { transform: rotateZ(-7deg) skewY(-7deg) scaleY(1.07); }
+  70% { transform: rotateZ(9deg) skewY(9deg) scaleY(0.93); }
+}
+.flag-waving {
+  animation: flag-wave 1.2s infinite linear;
+  transform-origin: left center;
+}
+
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
+
+@keyframes flag-wave {
+  0%, 100% { transform: rotateZ(-7deg) skewY(-7deg) scaleY(1.07); }
+  20% { transform: rotateZ(9deg) skewY(9deg) scaleY(0.93); }
+  50% { transform: rotateZ(-7deg) skewY(-7deg) scaleY(1.07); }
+  70% { transform: rotateZ(9deg) skewY(9deg) scaleY(0.93); }
+}
+.flag-waving {
+  animation: flag-wave 1.2s infinite linear;
+  transform-origin: left center;
+}
+
