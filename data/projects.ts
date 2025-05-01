@@ -17,7 +17,7 @@ export const projects: Project[] = [
     description: 'A website project for I4s. Modern, responsive and built for performance.',
     techStack: ['React', 'Next.js', 'Tailwind CSS'],
     tags: ['web'],
-    image: '/I4s.png',
+    image: '/I4S.png',
     demo: 'https://impactconsultet.com/',
   },
   {

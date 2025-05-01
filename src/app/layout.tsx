@@ -23,12 +23,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tsegaye Tadele | Full Stack Developer & AI Specialist",
+  title: "Tsegaye Tadele | Full Stack Developer & AI Integration Specialist",
   description: "Portfolio of Tsegaye Tadele, a passionate Full Stack Developer and AI Integration Specialist based in Addis Ababa. Explore projects, skills, and experience in Next.js, React, Tailwind CSS, Python, and more.",
   keywords: [
     "Tsegaye Tadele",
     "Portfolio developer",
-    "Website developer",
     "Mobile app developer",
     "Full Stack Developer",
     "Full Stack Developer in Ethiopia",
@@ -47,12 +46,12 @@ export const metadata: Metadata = {
     "UI/UX Designer",
     "UI/UX Designer in Ethiopia",
   ],
-  authors: [{ name: "Tsegaye Tadele", url: "https://tsegaye-tadele.com" }],
+  authors: [{ name: "Tsegaye Tadele", url: "https://portfolio-two-kappa-98.vercel.app/" }],
   creator: "Tsegaye Tadele",
   openGraph: {
     title: "Tsegaye Tadele | Full Stack Developer & AI Specialist",
     description: "Portfolio of Tsegaye Tadele, Full Stack Developer & AI Integration Specialist. See my work, skills, and contact info.",
-    url: "https://tsegaye-tadele.com",
+    url: "https://portfolio-two-kappa-98.vercel.app/",
     siteName: "Tsegaye Tadele Portfolio",
     images: [
       {
