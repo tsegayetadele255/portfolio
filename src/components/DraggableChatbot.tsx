@@ -132,7 +132,7 @@ export default function DraggableChatbot() {
       });
       const data = await res.json();
       setMessages((msgs) => [...msgs, { role: "assistant", content: data.reply }]);
-    } catch (e) {
+    } catch {
       setMessages((msgs) => [...msgs, { role: "assistant", content: "Sorry, something went wrong." }]);
     } finally {
       setLoading(false);
