@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tsegaye Tadele's Portfolio
+
+A modern, responsive portfolio website built with [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcss.com/), designed to showcase my skills, projects, and achievements as a software developer and biomedical engineer.
+
+## Features
+- **Project Gallery:** Showcases featured and other projects with live demos and GitHub links
+- **Skills & Certificates:** Highlights technical skills and downloadable certificates
+- **Testimonials:** Displays client and peer feedback
+- **Draggable AI Chatbot:** Interactive assistant powered by Groq API, supports markdown, and is touch/mouse draggable
+- **Responsive Design:** Looks great on desktop, tablet, and mobile
+- **Modern UI:** Built with Tailwind CSS, ShadCN components, and Font Awesome icons
+
+## Tech Stack
+- Next.js 14 (App Router)
+- React
+- Tailwind CSS
+- ShadCN UI
+- Font Awesome
+- Groq API (AI chatbot)
 
 ## Getting Started
 
-First, run the development server:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/tsegayetadele255/portfolio.git
+   cd portfolio
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+3. **Set up environment variables:**
+   - Copy `.env.example` to `.env.local` and fill in your API keys (see `.env.local` for required variables).
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+5. **Open [http://localhost:3000](http://localhost:3000) in your browser.**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Project Structure
+- `src/app/` - Main Next.js app directory
+- `src/components/` - Reusable React components (Navbar, DraggableChatbot, etc.)
+- `data/projects.ts` - Project cards data
+- `public/` - Static assets (images, certificates, etc.)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Live Demo
+[https://tsegaye-tadele.com/](https://tsegaye-tadele.com/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## License
+MIT
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Contact:**
+- Email: abietadele255@gmail.com
+- LinkedIn: [Tsegaye Tadele](https://www.linkedin.com/in/tsegaye-tadele-ba6657329/)
+- GitHub: [tsegayetadele255](https://github.com/tsegayetadele255)
