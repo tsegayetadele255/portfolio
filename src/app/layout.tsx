@@ -23,8 +23,55 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tsegaye's Portfolio",
-  description: "Welcome to Tsegaye's Portfolio - Full Stack Developer & AI Enthusiast.",
+  title: "Tsegaye Tadele | Full Stack Developer & AI Specialist",
+  description: "Portfolio of Tsegaye Tadele, a passionate Full Stack Developer and AI Integration Specialist based in Addis Ababa. Explore projects, skills, and experience in Next.js, React, Tailwind CSS, Python, and more.",
+  keywords: [
+    "Tsegaye Tadele",
+    "Portfolio developer",
+    "Website developer",
+    "Mobile app developer",
+    "Full Stack Developer",
+    "Full Stack Developer in Ethiopia",
+    "AI Integration Specialist",
+    "AI Integration Developer",
+    "AI Integration Specialist in Ethiopia",
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+    "TypeScript",
+    "Python",
+    "Web Developer",
+    "Software Engineer",
+    "Addis Ababa",
+    "Odoo Customisation In Ethiopia",
+    "UI/UX Designer",
+    "UI/UX Designer in Ethiopia",
+  ],
+  authors: [{ name: "Tsegaye Tadele", url: "https://tsegaye-tadele.com" }],
+  creator: "Tsegaye Tadele",
+  openGraph: {
+    title: "Tsegaye Tadele | Full Stack Developer & AI Specialist",
+    description: "Portfolio of Tsegaye Tadele, Full Stack Developer & AI Integration Specialist. See my work, skills, and contact info.",
+    url: "https://tsegaye-tadele.com",
+    siteName: "Tsegaye Tadele Portfolio",
+    images: [
+      {
+        url: "/me-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Tsegaye Tadele Portfolio Preview"
+      }
+    ],
+    locale: "en_US",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tsegaye Tadele | Full Stack Developer & AI Specialist",
+    description: "Portfolio of Tsegaye Tadele, Full Stack Developer & AI Integration Specialist.",
+    creator: "@tsegayetadele255",
+    images: ["/me-og.jpg"]
+  },
   icons: {
     icon: "/me-icon.jpg"
   }
