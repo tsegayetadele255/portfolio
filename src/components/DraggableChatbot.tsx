@@ -171,9 +171,7 @@ export default function DraggableChatbot() {
             touchAction: 'none'
           }}
           onMouseMove={onDrag}
-          onMouseUp={() => {
-            setDragging(false);
-          }}
+          onMouseUp={stopDrag}
           onTouchMove={onDrag}
           onTouchEnd={stopDrag}
         >
@@ -181,9 +179,7 @@ export default function DraggableChatbot() {
           <div
             className="flex items-center gap-2 cursor-move bg-[#18181b] rounded-t-3xl px-4 py-2 select-none touch-action-none"
             onMouseDown={startDrag}
-            onMouseUp={() => {
-              setDragging(false);
-            }}
+            onMouseUp={stopDrag}
             onMouseMove={onDrag}
             onTouchStart={startDrag}
             onTouchEnd={stopDrag}

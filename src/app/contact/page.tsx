@@ -13,10 +13,10 @@ export default function Contact() {
     setCardVisible(true);
     // Staggered field entrance
     const timeouts = [
-      setTimeout(f => setFieldVisible(prevState => [true, prevState[1], prevState[2], prevState[3]]), 200),
-      setTimeout(f => setFieldVisible(prevState => [true, true, prevState[2], prevState[3]]), 400),
-      setTimeout(f => setFieldVisible(prevState => [true, true, true, prevState[3]]), 600),
-      setTimeout(f => setFieldVisible([true, true, true, true]), 800),
+      setTimeout(() => setFieldVisible(f => [true, f[1], f[2], f[3]]), 200),
+      setTimeout(() => setFieldVisible(f => [true, true, f[2], f[3]]), 400),
+      setTimeout(() => setFieldVisible(f => [true, true, true, f[3]]), 600),
+      setTimeout(() => setFieldVisible(() => [true, true, true, true]), 800),
     ];
     return () => timeouts.forEach(clearTimeout);
   }, []);
