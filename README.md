@@ -50,10 +50,6 @@ A modern, responsive portfolio website built with [Next.js](https://nextjs.org/)
 ## Live Demo
 [https://tsegaye-tadele.com/](https://tsegaye-tadele.com/)
 
-## License
-MIT
-
----
 
 **Contact:**
 - Email: abietadele255@gmail.com
