@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tsegaye Tadele | Full Stack Developer & AI Specialist",
+    title: "Tsegaye Tadele portfolio",
     description: "Portfolio of Tsegaye Tadele, Full Stack Developer & AI Integration Specialist.",
     creator: "@tsegayetadele255",
     images: ["/me-og.jpg"]
