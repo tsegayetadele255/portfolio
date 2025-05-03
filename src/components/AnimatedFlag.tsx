@@ -84,8 +84,8 @@ const AnimatedFlag: React.FC = () => {
           {/* Static code lines inside the flag */}
           <text x={40} y={70} fontFamily="monospace" fontSize={18} fill="#38bdf8" filter="url(#glow)" >Hello! I am Tsegaye! a full-stack  </text>
           <text x={40} y={110} fontFamily="monospace" fontSize={18} fill="#38bdf8" filter="url(#glow)" > and mobile app developer, </text>
-          <text x={40} y={150} fontFamily="monospace" fontSize={18} fill="#38bdf8" filter="url(#glow)" >AI Integration Specialist and </text>
-          <text x={40} y={190} fontFamily="monospace" fontSize={18} fill="#38bdf8" filter="url(#glow)" > UI/UX Designer, Biomedical Engineer </text>
+          <text x={40} y={150} fontFamily="monospace" fontSize={18} fill="#38bdf8" filter="url(#glow)" >AI Integration Specialist, UI/UX </text>
+          <text x={40} y={190} fontFamily="monospace" fontSize={18} fill="#38bdf8" filter="url(#glow)" > Designer and Biomedical Engineer </text>
           <text x={40} y={230} fontFamily="monospace" fontSize={18} fill="#38bdf8" filter="url(#glow)" >feel free to contact me !</text>
         </g>
       </g>
