@@ -12,14 +12,16 @@ export default function ResumePage() {
         @media print {
           /* Remove default margins */
           @page {
-            margin: 0;
-            size: A4;
+            margin: 0.5cm;
+            size: A4 portrait;
           }
           
-          body {
+          html, body {
             margin: 0;
             padding: 0;
             background: white !important;
+            width: 100%;
+            height: 100%;
           }
           
           /* Hide everything except resume content */
@@ -29,8 +31,13 @@ export default function ResumePage() {
           
           /* Show only the resume container */
           #resume-container {
-            display: block !important;
+            display: flex !important;
             visibility: visible !important;
+            min-height: auto !important;
+            padding: 0 !important;
+            background: white !important;
+            align-items: flex-start !important;
+            justify-content: center !important;
           }
           
           #resume-container * {
@@ -55,36 +62,37 @@ export default function ResumePage() {
             box-shadow: none !important;
             border-radius: 0 !important;
             page-break-inside: avoid;
-          }
-          
-          /* Preserve the two-column layout */
-          #resume-content {
             display: flex !important;
             flex-direction: row !important;
           }
           
-          /* Preserve sidebar styling */
+          /* Preserve sidebar styling - force desktop layout for print */
           #resume-content aside {
             background-color: #23395d !important;
             color: white !important;
             width: 33.333333% !important;
+            max-width: 33.333333% !important;
             flex-shrink: 0 !important;
             -webkit-print-color-adjust: exact !important;
             print-color-adjust: exact !important;
+            padding: 1.5rem 1rem !important;
           }
           
           /* Preserve main content styling */
           #resume-content main {
             background-color: white !important;
             flex: 1 !important;
+            width: 66.666667% !important;
             -webkit-print-color-adjust: exact !important;
             print-color-adjust: exact !important;
+            padding: 1.5rem !important;
           }
           
           /* Ensure colors are printed */
           * {
             -webkit-print-color-adjust: exact !important;
             print-color-adjust: exact !important;
+            color-adjust: exact !important;
           }
           
           /* Preserve text colors */
@@ -93,20 +101,36 @@ export default function ResumePage() {
             -webkit-print-color-adjust: exact !important;
             print-color-adjust: exact !important;
           }
+          
+          /* Ensure images print */
+          img {
+            max-width: 100% !important;
+            page-break-inside: avoid;
+          }
+          
+          /* Prevent content from breaking across pages */
+          h1, h2, h3 {
+            page-break-after: avoid;
+          }
+          
+          ul, ol {
+            page-break-inside: avoid;
+          }
         }
       `}</style>
 
-      {/* Download Button */}
+      {/* Download Button - Better mobile positioning */}
       <button
         onClick={handleDownload}
-        className="fixed bottom-8 right-8 z-50 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg p-4 flex items-center gap-2 transition-colors print:hidden no-print"
+        className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-50 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg p-3 sm:p-4 flex items-center gap-2 transition-colors print:hidden no-print"
         title="Download Resume as PDF"
         suppressHydrationWarning
+        aria-label="Download Resume as PDF"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
         </svg>
-        <span className="hidden sm:inline font-semibold">Download PDF</span>
+        <span className="hidden sm:inline font-semibold text-sm">Download PDF</span>
       </button>
 
       <h2 className="text-4xl sm:text-5xl font-style-italic text-[white] text-center py-6 bg-gradient-to-b from-[#18181b] to-[#232326] no-print">Here is My Resume...</h2>
