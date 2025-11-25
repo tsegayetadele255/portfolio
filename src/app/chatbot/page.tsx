@@ -51,11 +51,12 @@ export default function ChatbotPage() {
           width={40}
           height={40}
           className="rounded-full border border-gray-300 dark:border-gray-600 object-cover"
+          style={{ width: 'auto', height: 'auto' }}
         />
         <h1 className="text-3xl font-bold text-white">Tsegaye&apos;s AI Assistant Chatbot</h1>
       </div>
       <div className="border border-gray-800 rounded-3xl p-4 h-96 overflow-y-auto bg-[#18181b] mb-4">
-      <div className="mb-4 text-gray-200 text-lg">Welcome! I’m Tsegaye’s AI assistant. Ask me anything about Tsegaye, his skills, experience, or projects and etc!</div>
+        <div className="mb-4 text-gray-200 text-lg">Welcome! I’m Tsegaye’s AI assistant. Ask me anything about Tsegaye, his skills, experience, or projects and etc!</div>
         {messages.filter(msg => msg.role !== "system").map((msg, idx) => (
           msg.role === "assistant" ? (
             <div key={idx} className="flex justify-end items-start gap-2 my-2">
@@ -65,11 +66,12 @@ export default function ChatbotPage() {
                 width={30}
                 height={30}
                 className="rounded-full border border-gray-300 dark:border-gray-600 object-cover"
+                style={{ width: 'auto', height: 'auto' }}
               />
               <span className="inline-block bg-[#232326] text-white italic px-3 py-2 rounded-2xl shadow max-w-xs text-left">
                 {msg.content}
               </span>
-              
+
             </div>
           ) : (
             <div key={idx} className="flex justify-start my-2">
@@ -101,8 +103,9 @@ export default function ChatbotPage() {
           className="flex-1 px-3 py-2  border-gray-700 rounded bg-[#232326] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
           placeholder="Ask me about Tsegaye..."
           disabled={loading}
+          suppressHydrationWarning
         />
-        <button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition-colors" disabled={loading}>
+        <button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition-colors" disabled={loading} suppressHydrationWarning>
           {loading ? "Generating..." : "Send"}
         </button>
       </form>

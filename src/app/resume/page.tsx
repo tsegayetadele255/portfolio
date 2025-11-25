@@ -1,10 +1,119 @@
+"use client";
+
 export default function ResumePage() {
+  const handleDownload = () => {
+    window.print();
+  };
+
   return (
     <>
-      <h2 className="text-4xl sm:text-5xl font-style-italic text-[white] text-center py-6 bg-gradient-to-b from-[#18181b] to-[#232326] ">Here is My Resume...</h2>
-      <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-b from-[#18181b] to-[#232326] py-8 px-2">
+      {/* Print-specific styles */}
+      <style jsx global>{`
+        @media print {
+          /* Remove default margins */
+          @page {
+            margin: 0;
+            size: A4;
+          }
+          
+          body {
+            margin: 0;
+            padding: 0;
+            background: white !important;
+          }
+          
+          /* Hide everything except resume content */
+          body > * {
+            display: none !important;
+          }
+          
+          /* Show only the resume container */
+          #resume-container {
+            display: block !important;
+            visibility: visible !important;
+          }
+          
+          #resume-container * {
+            visibility: visible !important;
+          }
+          
+          /* Hide download button, navbar, footer, chatbot, header */
+          .no-print,
+          nav,
+          footer,
+          button {
+            display: none !important;
+          }
+          
+          /* Position resume content */
+          #resume-content {
+            position: relative !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            box-shadow: none !important;
+            border-radius: 0 !important;
+            page-break-inside: avoid;
+          }
+          
+          /* Preserve the two-column layout */
+          #resume-content {
+            display: flex !important;
+            flex-direction: row !important;
+          }
+          
+          /* Preserve sidebar styling */
+          #resume-content aside {
+            background-color: #23395d !important;
+            color: white !important;
+            width: 33.333333% !important;
+            flex-shrink: 0 !important;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+          }
+          
+          /* Preserve main content styling */
+          #resume-content main {
+            background-color: white !important;
+            flex: 1 !important;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+          }
+          
+          /* Ensure colors are printed */
+          * {
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+          }
+          
+          /* Preserve text colors */
+          .text-blue-500,
+          .text-\\[\\#23395d\\] {
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+          }
+        }
+      `}</style>
+
+      {/* Download Button */}
+      <button
+        onClick={handleDownload}
+        className="fixed bottom-8 right-8 z-50 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg p-4 flex items-center gap-2 transition-colors print:hidden no-print"
+        title="Download Resume as PDF"
+        suppressHydrationWarning
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+        <span className="hidden sm:inline font-semibold">Download PDF</span>
+      </button>
+
+      <h2 className="text-4xl sm:text-5xl font-style-italic text-[white] text-center py-6 bg-gradient-to-b from-[#18181b] to-[#232326] no-print">Here is My Resume...</h2>
+
+      <div id="resume-container" className="min-h-screen w-full flex items-center justify-center bg-gradient-to-b from-[#18181b] to-[#232326] py-8 px-2">
         {/* Unified Paper Container */}
-        <div className="flex flex-col md:flex-row w-full max-w-4xl bg-white rounded-xl shadow-2xl overflow-hidden">
+        <div id="resume-content" className="flex flex-col md:flex-row w-full max-w-4xl bg-white rounded-xl shadow-2xl overflow-hidden">
           {/* Left Sidebar */}
           <aside className="w-full md:w-1/3 bg-[#23395d] text-white flex flex-col items-center py-8 px-6">
             <img src="/me.jpg" alt="Tsegaye Tadele" className="w-48 h-48 rounded-full border-4 border-white shadow mb-6 object-cover object-top" />
@@ -52,7 +161,7 @@ export default function ResumePage() {
             <section className="mb-6">
               <h2 className="text-lg font-bold text-[#23395d] tracking-wide mb-1">PROFILE</h2>
               <p className="text-gray-800 text-[15px] leading-relaxed">
-                Versatile and result-driven Software Developer and Biomedical Engineer with expertise in designing and building a wide range of software solutions, including websites, mobile applications, and custom platforms. Passionate about creating impactful technologies that blend engineering, healthcare innovation, and digital experiences. Skilled in full-stack development, mobile technologies, biomedical systems, and user-centered design. Known for rapid learning, creative problem-solving, and delivering high-quality, scalable products. Committed to pushing the boundaries of technology to improve lives and drive meaningful progress across industries.
+                Skilled Software Developer and Biomedical Engineer with expertise in designing and building a wide range of software solutions, including websites, mobile applications, and custom platforms. Passionate about creating impactful technologies that blend engineering, healthcare innovation, and digital experiences. Skilled in full-stack development, mobile technologies, biomedical systems, and user-centered design. Known for rapid learning, creative problem-solving, and delivering high-quality, scalable products. Committed to pushing the boundaries of technology to improve lives and drive meaningful progress across industries.
               </p>
             </section>
             <section className="mb-6">
@@ -60,7 +169,7 @@ export default function ResumePage() {
               <div className="mb-2 flex justify-between items-center">
                 <div>
                   <div className="font-bold text-md">I4S PLC</div>
-                  <div className="text-gray-600 text-sm">IT Manager</div>
+                  <div className="text-gray-600 text-sm">Software Developer and IT Manager</div>
                 </div>
                 <div className="text-gray-600 text-sm">2023 - PRESENT</div>
               </div>
@@ -86,15 +195,9 @@ export default function ResumePage() {
                 <div>
                   <div className="font-bold">Adane Bulo</div>
                   <div className="text-gray-700 text-sm">I4S PLC / CEO</div>
-                  <div className="text-gray-700 text-sm">Phone: +251900000000</div>
                   <div className="text-gray-700 text-sm">Email: Adaneb@gmail.com</div>
                 </div>
-                <div>
-                  <div className="font-bold">Harper Richard</div>
-                  <div className="text-gray-700 text-sm">Wardiner Inc. / CEO</div>
-                  <div className="text-gray-700 text-sm">Phone: +256-789-456-789</div>
-                  <div className="text-gray-700 text-sm">Email: harper.richard@wardiner.com</div>
-                </div>
+
               </div>
             </section>
           </main>

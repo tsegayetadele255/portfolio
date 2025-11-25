@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0">
         {/* Left: Profile */}
         <div className="flex items-center gap-4 mb-6 md:mb-0">
-          <Image src="/me.jpg" alt="Tsegaye" width={56} height={56} className="rounded-full border-2 border-[#b8af8b] object-cover" />
+          <Image src="/me.jpg" alt="Tsegaye" width={56} height={56} className="rounded-full border-2 border-[#b8af8b] object-cover" style={{ width: 'auto', height: 'auto' }} />
           <span className="text-2xl font-bold text-blue-400 font-dancing-script tracking-wide hover:scale-110 transition-transform duration-300">Tsegaye</span>
         </div>
         {/* Center: Page Links */}
@@ -22,7 +22,7 @@ export default function Footer() {
         <div className="flex flex-col items-center md:items-end">
           <span className="uppercase text-xs font-bold tracking-widest text-[#38bdf8] mb-2">Contacts</span>
           <div className="flex gap-5 text-2xl">
-            <a href="https://www.linkedin.com/in/tsegaye-tadele-ba6657329/" target="_blank" rel="noopener noreferrer" className="hover:text-[#38bdf8] transition-colors">
+            <a href="https://www.linkedin.com/in/tsegaye-tadele-315170397" target="_blank" rel="noopener noreferrer" className="hover:text-[#38bdf8] transition-colors">
               <i className="fa-brands fa-linkedin-in"></i>
             </a>
             <a href="https://web.facebook.com/profile.php?id=100049911753229" target="_blank" rel="noopener noreferrer" className="hover:text-[#38bdf8] transition-colors">

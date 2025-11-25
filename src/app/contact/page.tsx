@@ -45,7 +45,7 @@ export default function Contact() {
     <section className="relative flex items-center justify-center min-h-screen bg-gradient-to-r from-black via-zinc-900 to-neutral-800 px-2 py-8 overflow-hidden">
       {/* Decorative Contact SVG Icon */}
       {/* Multiple Decorative SVG Contact Icons */}
-      <svg className="absolute inset-0 w-screen h-screen opacity-10 pointer-events-none select-none z-0 animate-[slowspin_60s_linear_infinite]" style={{willChange:'transform'}} viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <svg className="absolute inset-0 w-screen h-screen opacity-10 pointer-events-none select-none z-0 animate-[slowspin_60s_linear_infinite]" style={{ willChange: 'transform' }} viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <g transform="translate(0,0) scale(1)">
           <circle cx="300" cy="300" r="280" fill="#fff" />
           <g>
@@ -107,17 +107,18 @@ export default function Contact() {
         <h1 className="text-4xl font-bold text-white text-center mb-6">Let&apos;s Get in Touch!</h1>
         <form ref={formRef} onSubmit={sendEmail} className="w-full flex flex-col gap-4">
           <label htmlFor="user_name" className={`font-semibold text-gray-200 transition-all duration-700 ${fieldVisible[0] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>Name</label>
-          <input name="user_name" id="user_name" type="text" placeholder="Full Name" className={`px-4 py-3 rounded-lg border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-purple-400 text-white bg-[#232326] placeholder-gray-400 transition-all duration-700 focus:shadow-lg focus:scale-[1.03] ${fieldVisible[0] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`} required />
+          <input name="user_name" id="user_name" type="text" placeholder="Full Name" className={`px-4 py-3 rounded-lg border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-purple-400 text-white bg-[#232326] placeholder-gray-400 transition-all duration-700 focus:shadow-lg focus:scale-[1.03] ${fieldVisible[0] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`} required suppressHydrationWarning />
           <label htmlFor="user_email" className={`font-semibold text-gray-200 transition-all duration-700 delay-100 ${fieldVisible[1] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>Email</label>
-          <input name="user_email" id="user_email" type="email" placeholder="Your Email" className={`px-4 py-3 rounded-lg border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-purple-400 text-white bg-[#232326] placeholder-gray-400 transition-all duration-700 delay-100 focus:shadow-lg focus:scale-[1.03] ${fieldVisible[1] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`} required />
+          <input name="user_email" id="user_email" type="email" placeholder="Your Email" className={`px-4 py-3 rounded-lg border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-purple-400 text-white bg-[#232326] placeholder-gray-400 transition-all duration-700 delay-100 focus:shadow-lg focus:scale-[1.03] ${fieldVisible[1] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`} required suppressHydrationWarning />
           <label htmlFor="message" className={`font-semibold text-gray-200 transition-all duration-700 delay-200 ${fieldVisible[2] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>Message</label>
-          <textarea name="message" id="message" placeholder="Your Message" className={`px-4 py-3 rounded-lg border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-purple-400 text-white bg-[#232326] placeholder-gray-400 min-h-[120px] transition-all duration-700 delay-200 focus:shadow-lg focus:scale-[1.03] ${fieldVisible[2] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`} required />
+          <textarea name="message" id="message" placeholder="Your Message" className={`px-4 py-3 rounded-lg border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-purple-400 text-white bg-[#232326] placeholder-gray-400 min-h-[120px] transition-all duration-700 delay-200 focus:shadow-lg focus:scale-[1.03] ${fieldVisible[2] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`} required suppressHydrationWarning />
           <button
             type="submit"
             className={`mt-4 w-full text-xl px-2 py-2 rounded border border-[#353a3f] bg-[#232326]/70 text-gray-100 transition-all duration-700 delay-300
               ${fieldVisible[3] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}
               hover:bg-[#232326]/90 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400`}
             disabled={loading}
+            suppressHydrationWarning
           >
             {loading ? "Sending..." : "Submit"}
           </button>

@@ -29,22 +29,20 @@ export default function Navbar() {
           aria-controls="mobile-menu"
           onClick={() => setMenuOpen((open) => !open)}
           className="relative w-10 h-10 flex items-center justify-center focus:outline-none group"
+          suppressHydrationWarning
         >
           <span className="sr-only">Open main menu</span>
           <span
-            className={`block absolute h-0.5 w-6 bg-blue-500 dark:bg-blue-400 rounded transition-all duration-300 ease-in-out ${
-              menuOpen ? "rotate-45 top-5" : "top-3"
-            }`}
+            className={`block absolute h-0.5 w-6 bg-blue-500 dark:bg-blue-400 rounded transition-all duration-300 ease-in-out ${menuOpen ? "rotate-45 top-5" : "top-3"
+              }`}
           ></span>
           <span
-            className={`block absolute h-0.5 w-6 bg-blue-500 dark:bg-blue-400 rounded transition-all duration-300 ease-in-out ${
-              menuOpen ? "opacity-0 left-5" : "top-5"
-            }`}
+            className={`block absolute h-0.5 w-6 bg-blue-500 dark:bg-blue-400 rounded transition-all duration-300 ease-in-out ${menuOpen ? "opacity-0 left-5" : "top-5"
+              }`}
           ></span>
           <span
-            className={`block absolute h-0.5 w-6 bg-blue-500 dark:bg-blue-400 rounded transition-all duration-300 ease-in-out ${
-              menuOpen ? "-rotate-45 top-5" : "top-7"
-            }`}
+            className={`block absolute h-0.5 w-6 bg-blue-500 dark:bg-blue-400 rounded transition-all duration-300 ease-in-out ${menuOpen ? "-rotate-45 top-5" : "top-7"
+              }`}
           ></span>
         </button>
       </div>
@@ -73,17 +71,15 @@ export default function Navbar() {
       {/* Animated Mobile Menu */}
       <div
         id="mobile-menu"
-        className={`fixed top-0 left-0 w-full h-full bg-black/60 backdrop-blur-sm z-40 transition-opacity duration-300 ${
-          menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed top-0 left-0 w-full h-full bg-black/60 backdrop-blur-sm z-40 transition-opacity duration-300 ${menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
         aria-hidden={!menuOpen}
         tabIndex={-1}
         onClick={() => setMenuOpen(false)}
       >
         <div
-          className={`absolute right-0 top-0 min-h-screen w-64 bg-gradient-to-b from-black via-zinc-900 to-neutral-800/95 backdrop-blur-md border-l border-zinc-800 shadow-2xl z-50 flex flex-col gap-4 transition-transform duration-500 ease-in-out ${
-            menuOpen ? "translate-x-0 scale-100 opacity-100" : "translate-x-full scale-95 opacity-0"
-          }`}
+          className={`absolute right-0 top-0 min-h-screen w-64 bg-gradient-to-b from-black via-zinc-900 to-neutral-800/95 backdrop-blur-md border-l border-zinc-800 shadow-2xl z-50 flex flex-col gap-4 transition-transform duration-500 ease-in-out ${menuOpen ? "translate-x-0 scale-100 opacity-100" : "translate-x-full scale-95 opacity-0"
+            }`}
           onClick={(e) => e.stopPropagation()}
         >
           {/* Navigation Links */}
