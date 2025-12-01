@@ -152,7 +152,7 @@ export default function ResumePage() {
             </div>
             <div className="mb-8 w-full">
               <h2 className="text-lg font-bold tracking-widest mb-2">EDUCATION</h2>
-              <div className="text-sm mb-1">2021 - present</div>
+              <div className="text-sm mb-1">2021 - 2025</div>
               <div className="font-semibold text-base">ADDIS ABABA UNIVERSITY</div>
               <div className="text-sm">BSc in Biomedical Engineering</div>
             </div>
@@ -172,14 +172,14 @@ export default function ResumePage() {
               <ul className="space-y-1 text-sm">
                 <li>English (Fluent)</li>
                 <li>Amharic (Fluent)</li>
-                <li>Afan Oromo (Fluent)</li>
+                <li>Afan Oromo (Native)</li>
               </ul>
             </div>
           </aside>
           {/* Right Content (Paper) */}
           <main className="flex-1 w-full max-w-3xl bg-white rounded-none md:rounded-r-xl shadow-none border-none p-8">
             <div className="mb-6 border-b pb-4">
-              <h1 className="text-3xl font-extrabold text-[#23395d]">TSEGAYE <span className="text-blue-500">TADELE</span></h1>
+              <h1 className="text-3xl font-extrabold text-[#23395d]">TSEGAYE <span className="text-blue-500">TADELE</span> <span className="text-blue-500">REFU</span></h1>
               <div className="uppercase tracking-widest text-md font-bold text-[#23395d] mt-1">Software Developer</div>
             </div>
             <section className="mb-6">
@@ -193,9 +193,9 @@ export default function ResumePage() {
               <div className="mb-2 flex justify-between items-center">
                 <div>
                   <div className="font-bold text-md">I4S PLC</div>
-                  <div className="text-gray-600 text-sm">Software Developer and IT Manager</div>
+                  <div className="text-gray-600 text-sm">Software Developer and IT Manager Internship</div>
                 </div>
-                <div className="text-gray-600 text-sm">2023 - PRESENT</div>
+                <div className="text-gray-600 text-sm">2023 - present</div>
               </div>
               <ul className="list-disc ml-6 text-gray-800 text-[15px]">
                 <li>Maintain existing Softwares.</li>
