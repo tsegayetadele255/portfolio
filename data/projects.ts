@@ -35,6 +35,14 @@ export const projects: Project[] = [
     tags: ['web', 'ai'],
     image: '/portifolioimage.png',
     demo: 'https://tsegaye-tadele.com/',
-   
+
+  },
+  {
+    title: 'CV Maker',
+    description: 'A comprehensive tool for creating and visualizing professional resumes.',
+    techStack: ['Next.js', 'React', 'Tailwind CSS'],
+    tags: ['web'],
+    image: '/cv-maker.png',
+    demo: 'https://cv-maker-dusky.vercel.app/',
   },
 ];
