@@ -147,7 +147,7 @@ export default function ResumePage() {
                 <li><span className="font-semibold">📞</span> +251 927191851</li>
                 <li><span className="font-semibold">✉️</span> tsegayetadele92@gmail.com</li>
                 <li><span className="font-semibold">📍</span> Addis Ababa, Ethiopia</li>
-                <li><span className="font-semibold">🌐</span> tsegaye-tadele.dev</li>
+                <li><span className="font-semibold">🌐</span> https://portfolio-two-kappa-98.vercel.app/</li>
               </ul>
             </div>
             <div className="mb-8 w-full">
@@ -219,7 +219,7 @@ export default function ResumePage() {
                 <div>
                   <div className="font-bold">Adane Bulo</div>
                   <div className="text-gray-700 text-sm">I4S PLC / CEO</div>
-                  <div className="text-gray-700 text-sm">Email: Adaneb@gmail.com</div>
+                  <div className="text-gray-700 text-sm">Email: Adane.bulo@gmail.com</div>
                 </div>
 
               </div>

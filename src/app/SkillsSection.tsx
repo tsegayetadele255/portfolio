@@ -179,7 +179,7 @@ export default function SkillsSection() {
               ></div>
               <div className="flex-1 flex flex-col justify-end">
                 <h3 className="text-xl font-semibold mb-2 text-[#c0bba3]">Data Science</h3>
-                <p className="mb-2 text-gray-100 line-clamp-3">Comprehensive Data Science and Machine Learning certification, focusing on Python and advanced analytics.</p>
+                <p className="mb-2 text-gray-100 line-clamp-3">Data Science and Machine Learning certification, focusing on Python and advanced analytics.</p>
               </div>
             </div>
           </div>
@@ -214,7 +214,7 @@ export default function SkillsSection() {
           <span className="text-[#38bdf8] mt-2">websites developed</span>
         </div>
         <div className="flex-1 flex flex-col items-center justify-center py-8">
-          <span className="text-5xl font-bold text-[#38bdf8]">15+</span>
+          <span className="text-5xl font-bold text-[#38bdf8]">10+</span>
           <span className="text-[#38bdf8] mt-2">clients served</span>
         </div>
       </div>
