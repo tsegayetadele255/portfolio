@@ -29,13 +29,12 @@ export const projects: Project[] = [
     demo: 'https://proposalmaker.impactconsultet.com/',
   },
   {
-    title: 'Portfolio Website',
-    description: 'A modern, responsive portfolio website to showcase projects, skills, and testimonials. Built with Next.js and Tailwind CSS.',
-    techStack: ['Next.js', 'React', 'Tailwind CSS, AI'],
-    tags: ['web', 'ai'],
-    image: '/portifolioimage.png',
-    demo: 'https://tsegaye-tadele.com/',
-
+    title: 'Gulit market place',
+    description: 'An online marketplace platform connecting buyers and farmers. Features a user-friendly interface and secure transactions.',
+    techStack: ['Next.js', 'React', 'Tailwind CSS', 'Express', 'POSTGRESQL', 'JWT', 'i18next', 'Node.js'],
+    tags: ['web'],
+    image: '/gulit.png',
+    demo: 'https://gulit.impactconsultet.com/',
   },
   {
     title: 'CV Maker',
