@@ -147,7 +147,7 @@ export default function ResumePage() {
                 <li><span className="font-semibold">📞</span> +251 927191851</li>
                 <li><span className="font-semibold">✉️</span> tsegayetadele92@gmail.com</li>
                 <li><span className="font-semibold">📍</span> Addis Ababa, Ethiopia</li>
-                <li><span className="font-semibold">🌐</span> https://portfolio-two-kappa-98.vercel.app/</li>
+                <li><span className="font-semibold">🌐</span> https://portfolio-xi-bice-r04ngxw2c2.vercel.app</li>
                 <li><span className="font-semibold">🌐</span>https://github.com/tsegayetadele255</li>
               </ul>
             </div>
